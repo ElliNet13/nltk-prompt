@@ -3,7 +3,7 @@ import inspect
 import re
 
 def get_nltk_functions():
-    nltk_functions = ["download", "help", "exit"]
+    nltk_functions = ["download", "help", "exit", "download_all"]
     for name, obj in inspect.getmembers(nltk):
         if inspect.isfunction(obj):
             nltk_functions.append(name)
