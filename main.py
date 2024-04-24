@@ -11,8 +11,8 @@ def get_nltk_functions():
 
 def nltk_prompt():
     nltk_commands = get_nltk_functions()
-    print("NLTK Command Prompt")
-    print("Type 'help' for list of NLTK functions or 'exit' to quit.")
+    print("NLTK Prompt")
+    print("Type 'help' for list of commands or 'exit' to quit.")
 
     while True:
         command = input(">>> ").strip().lower()
@@ -36,7 +36,7 @@ def nltk_prompt():
             else:
                 download_package(command)
         else:
-            print("Invalid command. Type 'help' for list of NLTK functions.")
+            print("Invalid command. Type 'help' for list of commands.")
 
 def execute_nltk_function(func_name, args_str):
     # Parse the arguments string into a dictionary
