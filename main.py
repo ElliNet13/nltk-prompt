@@ -3,7 +3,7 @@ import inspect
 import re
 
 def get_nltk_functions():
-    nltk_functions = []
+    nltk_functions = ["download", "help", "exit"]
     for name, obj in inspect.getmembers(nltk):
         if inspect.isfunction(obj):
             nltk_functions.append(name)
@@ -21,7 +21,7 @@ def nltk_prompt():
             print("Exiting NLTK Prompt...")
             break
         elif command == 'help':
-            print("Available NLTK functions:")
+            print("Available commands:")
             for func in nltk_commands:
                 print("-", func)
         elif command in nltk_commands:
